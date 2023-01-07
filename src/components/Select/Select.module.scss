@@ -1,0 +1,51 @@
+@import "../../styles/colors.scss";
+@import "../../styles/global.scss";
+@import "../../styles/animation.scss";
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  position: relative;
+
+  .list {
+    z-index: 999;
+    position: fixed;
+    list-style: none;
+    top: 62px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    background-color: rgba($color: $pacific, $alpha: 0.5);
+
+    overflow-y: auto;
+    height: 94%;
+    margin-bottom: 10%;
+    .item {
+      color: $sunFlower;
+      border: 1px solid white;
+      border-radius: 20px;
+      text-align: center;
+      cursor: pointer;
+      font-size: large;
+      padding: 5px;
+
+      &:hover {
+        @include dropTextShadow;
+        // animation: glow 1s ease-in-out infinite alternate;
+        background-color: $sunFlower;
+        color: $pacific;
+        font-weight: bolder;
+        text-transform: capitalize;
+      }
+    }
+  }
+  .chipsContainer {
+    height: 100%;
+    width: 100%;
+  }
+}

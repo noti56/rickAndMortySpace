@@ -1,0 +1,17 @@
+@import "../../styles/colors.scss";
+.input {
+  outline: none;
+  //   border-radius: 20px;
+  border: none;
+  border-bottom: 1px solid  rgba($color: $sunFlower, $alpha: 0.5);
+  background-color: inherit;
+  color: $sunFlower;
+  font-size: large;
+  &::placeholder {
+    color: rgba($color: $sunFlower, $alpha: 0.5);
+  }
+  &:focus{
+    border-bottom: 1px solid  rgba($color: $sunFlower, $alpha: 1);
+
+  }
+}

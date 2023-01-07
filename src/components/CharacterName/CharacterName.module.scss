@@ -1,0 +1,28 @@
+@import "../../styles/colors.scss";
+@import "../../styles/global.scss";
+@import "../../styles/animation.scss";
+.nameContainer {
+  width: 166px;
+  background-color: rgba($color: #000000, $alpha: .3);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  //   align-items: center;
+  position: absolute;
+  left: -50px;
+  padding: 10px;
+
+  .name {
+    margin: 0;
+    color: $sunFlower;
+    color: rgba($color: $sunFlower, $alpha: .8);
+    font-weight: bold;
+    font-size: large;
+    @include textOverlap();
+
+    // @include dropTextShadow;
+    // left: -1px;
+    // position: absolute;
+  }
+}

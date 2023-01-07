@@ -1,0 +1,11 @@
+@mixin dropTextShadow {
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px black, 0 0 82px black,
+    0 0 92px black, 0 0 102px black, 0 0 151px black;
+}
+
+@mixin textOverlap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 1.2em;
+  white-space: nowrap;
+}

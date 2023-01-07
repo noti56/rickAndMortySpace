@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+.button {
+  background-color: $pacific;
+  color: $sunFlower;
+  border: 3px solid $sunFlower;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+//   padding: 5px;
+  &:hover {
+    transform: scale(1.1);
+  }
+  svg {
+    fill: $sunFlower;
+  }
+}

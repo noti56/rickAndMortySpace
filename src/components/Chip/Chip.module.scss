@@ -1,0 +1,29 @@
+@import "../../styles/colors.scss";
+@import "../../styles/global.scss";
+@import "../../styles/animation.scss";
+
+.chipContainer {
+  padding: 10px;
+  width: 100px;
+  //   height: 100%;
+  border: 1px solid $sunFlower;
+  color: $sunFlower;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .deleteWrapper {
+    align-self: self-start;
+
+
+  }
+  .textWrapper {
+    @include textOverlap();
+    width: 100%;
+  }
+}
+
+
