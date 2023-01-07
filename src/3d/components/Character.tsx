@@ -3,7 +3,6 @@ import MovingCube, { IMovingCube } from "./MovingCube";
 import Text3d from "./Text3d";
 import { Vector3 } from "@react-three/fiber";
 import { Vector3 as Vec3 } from "three";
-import r3fUtills from "../../utills/r3fUtills";
 import { Html } from "@react-three/drei";
 import Modal from "react-modal";
 import { Character as ICharacter } from "../../interfaces/api.interface";

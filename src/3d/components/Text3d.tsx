@@ -41,8 +41,6 @@ const Text3d = ({ position, text, color, size, rotation }: props) => {
           {
             font,
             size: size ? size : 80,
-            // height: 0.5,
-            // size: 80,
             height: 5,
             curveSegments: 12,
             bevelEnabled: false,

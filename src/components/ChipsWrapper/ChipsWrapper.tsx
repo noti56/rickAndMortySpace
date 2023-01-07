@@ -7,7 +7,7 @@ interface props {
 }
 
 const ChipsWrapper = ({ children }: props) => {
-  return <div className={styles.chipsWrapperContainer}>{children}</div>;
+  return <div className={styles.chipsWrapperContainer + " chipsWrapperContainer"}>{children}</div>;
 };
 
 export default ChipsWrapper;

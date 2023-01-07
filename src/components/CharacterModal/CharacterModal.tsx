@@ -5,6 +5,7 @@ import { Character } from "../../interfaces/api.interface";
 import styles from "./CharacterModal.module.scss";
 import Button from "../Button/Button";
 import { ReactComponent as Close } from "../../assets/delete.svg";
+import Delete from "../Delete/Delete";
 interface props {
   active: boolean;
   setActive: Dispatch<SetStateAction<boolean>>;
@@ -23,6 +24,8 @@ const CharacterModal = ({ active, setActive, character }: props) => {
           background: "rgba(211, 211, 211, 0.8)",
           borderColor: "#f1c40f",
           borderRadius: 20,
+          //   width: "80%",
+          //   margin: "auto",
         },
         // overlay: { background: "rgba(255, 255, 255, 0.2)" },
         overlay: { background: "inherit" },
@@ -32,7 +35,7 @@ const CharacterModal = ({ active, setActive, character }: props) => {
       <div className={styles.container}>
         <span className={styles.btnContainer}>
           <Button clickHandler={() => setActive(false)}>
-            <Close width={30} height={30} />
+            <Delete onClick={() => {}} />
           </Button>
         </span>
 

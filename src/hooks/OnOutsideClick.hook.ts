@@ -29,18 +29,7 @@ const useOnOutsideClick = (
     window.removeEventListener("click", onClick);
   };
 
-  // useEffect(() => {
-  //   // use effect to handle a listener to close the list
-  //   clearListener();
-  //   if (!toShowList) return;
-  //   window.addEventListener("click", onClick);
-  //   return () => {
-  //     clearListener();
-  //   };
-  // }, [toShowList]);
-
   useEffect(() => {
-    // use effect to handle a listener to close the list
     clearListener();
 
     if (!toShowList) return;

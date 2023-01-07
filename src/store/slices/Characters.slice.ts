@@ -23,23 +23,8 @@ export const charactersSlice = createSlice({
       });
       return { ...state, all: stateCopy };
     },
-    addToFiltered: (state, action: PayloadAction<number[] | string[]>) => {
-      const filteredStateCopy = { ...state.filtered };
-      action.payload.forEach((idToFilter) => {
-        const num_id = Number(idToFilter);
-        filteredStateCopy[num_id] = state.all[num_id];
-      });
-      return { ...state, filtered: filteredStateCopy };
-    },
-    removeFromFiltered: (state, action: PayloadAction<number[] | string[]>) => {
-      const filteredStateCopy = { ...state.filtered };
-      action.payload.forEach((idToFilter) => {
-        delete filteredStateCopy[Number(idToFilter)];
-      });
-      return { ...state, filtered: filteredStateCopy };
-    },
+
     setFiltered: (state, action: PayloadAction<number[] | string[]>) => {
-      // action.payload.forEach();
       const newFiltered: { [id: number]: Character } = {};
 
       action.payload.forEach((filters) => {
@@ -51,8 +36,7 @@ export const charactersSlice = createSlice({
   },
 });
 
-export const { addCharacters, addToFiltered, removeFromFiltered, setFiltered } =
-  charactersSlice.actions;
+export const { addCharacters, setFiltered } = charactersSlice.actions;
 export default charactersSlice.reducer;
 
 // Other code such as selectors can use the imported `RootState` type

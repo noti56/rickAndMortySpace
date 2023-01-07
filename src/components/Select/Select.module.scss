@@ -8,24 +8,29 @@
   width: 100%;
   align-items: center;
   position: relative;
-
+  .inputContainer {
+    // width: 20%;
+    display: flex;
+    justify-content: center;
+  }
   .list {
     z-index: 999;
     position: fixed;
     list-style: none;
-    top: 62px;
+    top: 85px;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-
-    background-color: rgba($color: $pacific, $alpha: 0.5);
-
+    background-color: rgba(21, 34, 56, 0.5);
     overflow-y: auto;
-    height: 94%;
-    margin-bottom: 10%;
+    height: 48%;
+    @include scrollerStyle;
+    gap: 15px;
+    // width: 17%;
+    align-items: center;
     .item {
+      width: 90%;
       color: $sunFlower;
       border: 1px solid white;
       border-radius: 20px;
@@ -33,7 +38,6 @@
       cursor: pointer;
       font-size: large;
       padding: 5px;
-
       &:hover {
         @include dropTextShadow;
         // animation: glow 1s ease-in-out infinite alternate;
@@ -46,6 +50,6 @@
   }
   .chipsContainer {
     height: 100%;
-    width: 100%;
+    width: 80%;
   }
 }

@@ -8,7 +8,7 @@ interface props {
 }
 const Chip = ({ children, deleteFunction }: props) => {
   return (
-    <div className={styles.chipContainer}>
+    <div className={styles.chipContainer + " chip"}>
       <span className={styles.deleteWrapper}>
         {deleteFunction ? <Delete onClick={deleteFunction} /> : null}
       </span>

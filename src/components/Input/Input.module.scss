@@ -7,6 +7,7 @@
   background-color: inherit;
   color: $sunFlower;
   font-size: large;
+  width: 80%;
   &::placeholder {
     color: rgba($color: $sunFlower, $alpha: 0.5);
   }

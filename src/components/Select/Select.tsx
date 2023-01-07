@@ -47,15 +47,16 @@ const Select = ({ options, selected, setSelected, removeFromSelected, placeholde
 
   return (
     <div ref={selectContainerRef} className={styles.container}>
-      <SearchInput
-        inputValue={inputValue}
-        setInputValue={setInputValue}
-        onFocus={() => setToShowList(true)}
-        originalArray={options}
-        setCopyArray={setOptionsCopy}
-        propertiesToCheckOn={["label", "value"]}
-        placeholder={placeholder}
-      />
+      <div className={styles.inputContainer}>
+        <SearchInput
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          onFocus={() => setToShowList(true)}
+          originalArray={options}
+          setCopyArray={setOptionsCopy}
+          propertiesToCheckOn={["label", "value"]}
+          placeholder={placeholder}
+        />
 
       {toShowList ? (
         <ul className={styles.list}>
@@ -73,6 +74,8 @@ const Select = ({ options, selected, setSelected, removeFromSelected, placeholde
           ))}
         </ul>
       ) : null}
+      </div>
+
       <div className={styles.chipsContainer}>
         <ChipsWrapper>
           {selected.map((selectedValue) => (

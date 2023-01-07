@@ -3,8 +3,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import { Character } from "../../interfaces/api.interface";
 import { useAppDispatch, useAppSelector } from "../../store/hook";
 import {
-  addToFiltered,
-  removeFromFiltered,
   setFiltered,
 } from "../../store/slices/Characters.slice";
 import dictionaryToArray from "../../utills/dictionaryToArray";
@@ -22,7 +20,7 @@ const CharacterForm = () => {
   }, [JSON.stringify(selected)]);
 
   const removeFromSelected = useCallback((selectedValue: string) => {
-    // dispatch(removeFromFiltered([selectedValue]));
+
     setSelected((selectState) => selectState.filter((select) => select != selectedValue));
   }, []);
 
